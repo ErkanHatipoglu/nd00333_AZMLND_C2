@@ -33,30 +33,27 @@ Image by Udacity
    Main steps in Authentication are as follows:
       - Use Git Bash to sign in Microsoft account using `az login` command.
       
-      ![Authentication_rm_2.png](attachment:Authentication_rm_2.png)
+      ![Authentication_rm_2.png](attachment:images/authentication/Authentication_rm_2.png)
       
       - Ensure the az command-line tool is installed along with the ml using `az extension add -n azure-cli-ml` command.
       
-      ![Authentication_rm_3.png](attachment:Authentication_rm_3.png)
+      ![Authentication_rm_3.png](attachment:images/authentication/Authentication_rm_3.png)
       
       - Create the Service Principal with az after login in using `az ad sp create-for-rbac --sdk-auth --name ml-auth` command.
       
-      ![Authentication_rm_4.png](attachment:Authentication_rm_4.png)
+      ![Authentication_rm_4.png](attachment:images/authentication/Authentication_rm_4.png)
       
       - Capture the "objectId" using the `clientID`. Use the following command:
       
       ```az ad sp show --id xxxxxxxx-3af0-4065-8e14-xxxxxxxxxxxx```
       
-      ![Authentication_rm_5.png](attachment:Authentication_rm_5.png)
+      ![Authentication_rm_5.png](attachment:images/authentication/Authentication_rm_5.png)
       
       - Assign the role to the new Service Principal for the given Workspace, Resource Group and User `objectId`. You will need to match your workspace, subscription, and ID. There should be no error at the output. Use the following command:
       
       ```az ml workspace share -w xxx -g xxx --user xxxxxxxx-cbdb-4cfd-089f-xxxxxxxxxxxx --role owner```
       
-      ![Authentication_rm_6.png](attachment:Authentication_rm_6.png)
-      
-      - 
-
+      ![Authentication_rm_6.png](attachment:images/authentication/Authentication_rm_6.png)
       
 
 ## Screen Recording
