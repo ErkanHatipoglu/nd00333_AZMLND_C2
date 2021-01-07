@@ -19,7 +19,7 @@ In this project, We are following the below steps:
 7. Create and publish a pipeline
 8. Documentation
 
-![Main Steps](steps.png)
+![Main Steps](images/steps/steps.png)
 
 Image by Udacity
 
