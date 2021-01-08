@@ -89,27 +89,27 @@ Image by Udacity
    
    - Create a new AutoML experiment
    
-   ![automl_4.png](images/automl/automl_4.png)
+   ![AutoML_4.png](images/automl/AutoML_4.png)
    
    - Configure a new compute cluster
    
-   ![automl_3.png](images/automl/automl_3.png)
+   ![AutoML_3.png](images/automl/AutoML_3.png)
    
    - Run the experiment using classification, ensure 'Explain best model' is checked
    
-   ![automl_5.png](images/automl/automl_5.png)
+   ![AutoML_5.png](images/automl/AutoML_5.png)
    
-   ![automl_8.png](images/automl/automl_8.png)
+   ![AutoML_8.png](images/automl/AutoML_8.png)
    
    - Wait for the experiment finishes and explore the best model
    
-   ![automl_9.png](images/automl/automl_9.png)
+   ![AutoML.png](images/automl/v_9.png)
    
-   ![automl_10.png](images/automl/automl_10.png)
+   ![AutoML_10.png](images/automl/AutoML_10.png)
         
-   ![automl_11.png](images/automl/automl_11.png)
+   ![AutoML_11.png](images/automl/AutoML_11.png)
    
-   ![automl_12.png](images/automl/automl_12.png)
+   ![AutoML_12.png](images/automl/AutoML_12.png)
    
 3. Deploy the best model
 ​
