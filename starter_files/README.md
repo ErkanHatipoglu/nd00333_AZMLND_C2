@@ -1,15 +1,15 @@
 # Operationalizing Machine Learning
-​
+
 In this project, we are working with the Bank Marketing dataset. We use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We are also creating, publishing, and consuming a pipeline. 
-​
+
 This dataset is about a phone call marketing campaign. The original data can be found [@UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing). The dataset can be used (as we are using) to predict if the client will subscribe to a term deposit or not. The target variable is y. 
-​
+
 The lab environment provided by Udacity will not be used for this project. Instead a local development environment along with Microsoft Azure account will be used. 
-​
+
 ## Architectural Diagram
-​
+
 In this project, We are following the below steps:
-​
+
 1. Authentication
 2. Automated ML Experiment
 3. Deploy the best model
@@ -18,16 +18,16 @@ In this project, We are following the below steps:
 6. Consume model endpoints
 7. Create and publish a pipeline
 8. Documentation
-​
+
 ![Main Steps](images/steps/steps.png)
-​
+
 Image by Udacity
-​
+
 ## Key Steps
 1. Authentication
-​
+
    Authentication is crucial for the continuous flow of operations. Continuous Integration and Delivery system (CI/CD) rely on uninterrupted flows. When authentication is not set properly, it requires human interaction and thus, the flow is interrupted. An ideal scenario is that the system doesn't stop waiting for a user to input a password. So whenever possible, it's good to use authentication with automation.
-​
+
    A “Service Principal” is a user role with controlled permissions to access specific resources. Using a service principal is a great way to allow authentication while reducing the scope of permissions, which enhances security.
    
    Main operations in Authentication step are as follows:
@@ -57,7 +57,7 @@ Image by Udacity
       ![Authentication_rm_6.png](images/authentication/authentication_6.png)
       
 2. Automated ML Experiment
-​
+
    In this step, we will create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment. We will use the Bank Marketing dataset described above.
    
    Main operations in Automated ML Experiment step are as follows:
@@ -112,15 +112,35 @@ Image by Udacity
    
    ![Deploy_5.png](images/deploy/Deploy_5.png)
    
-4. Enable logging  
-​
+4. Enable logging
+
+   We can now enable Application Insights and retrieve logs. Application Insights is a special Azure service which provides key facts about an application. It is a very useful tool to detect anomalies and visualize performance.
+   
+   Main operations in Enable logging step are as follows:
+   
+   - Download config.json from ML Studio
+   
+   ![App-In_8.png](images/application_insights/App-In_8.png)
+   
+   - Write and run the code (logs.py) to enable Application insights
+
+   ![App-In_5.png](images/application_insights/App-In_5.png)
+   
+   ![App-In_6.png](images/application_insights/App-In_6.png)
+   
+   - Explore Application insights
+   
+   ![App-In_7.png](images/application_insights/App-In_7.png)
+   
+5. Swagger Documentation
+
+   In this step, you will consume the deployed model using Swagger.
+
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-​
+
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
-​
+
 ## References
 - [Machine Learning Engineer for Microsoft Azure](https://www.udacity.com/course/machine-learning-engineer-for-microsoft-azure-nanodegree--nd00333)
-​
-​
