@@ -30,31 +30,75 @@ Image by Udacity
 
    A “Service Principal” is a user role with controlled permissions to access specific resources. Using a service principal is a great way to allow authentication while reducing the scope of permissions, which enhances security.
    
-   Main steps in Authentication are as follows:
+   Main operations in Authentication step are as follows:
+   
       - Use Git Bash to sign in Microsoft account using `az login` command.
       
-      ![Authentication_rm_2.png](images/authentication/authentication_rm_2.png)
+      ![Authentication_rm_2.png](images/authentication/authentication_2.png)
       
       - Ensure the az command-line tool is installed along with the ml using `az extension add -n azure-cli-ml` command.
       
-      ![Authentication_rm_3.png](images/authentication/authentication_rm_3.png)
+      ![Authentication_rm_3.png](images/authentication/authentication_3.png)
       
       - Create the Service Principal with az after login in using `az ad sp create-for-rbac --sdk-auth --name ml-auth` command.
       
-      ![Authentication_rm_4.png](images/authentication/authentication_rm_4.png)
+      ![Authentication_rm_4.png](images/authentication/authentication_4.png)
       
       - Capture the "objectId" using the `clientID`. Use the following command:
       
       ```az ad sp show --id xxxxxxxx-3af0-4065-8e14-xxxxxxxxxxxx```
       
-      ![Authentication_rm_5.png](images/authentication/authentication_rm_5.png)
+      ![Authentication_rm_5.png](images/authentication/authentication_5.png)
       
       - Assign the role to the new Service Principal for the given Workspace, Resource Group and User `objectId`. You will need to match your workspace, subscription, and ID. There should be no error at the output. Use the following command:
       
       ```az ml workspace share -w xxx -g xxx --user xxxxxxxx-cbdb-4cfd-089f-xxxxxxxxxxxx --role owner```
       
-      ![Authentication_rm_6.png](images/authentication/authentication_rm_6.png)
+      ![Authentication_rm_6.png](images/authentication/authentication_6.png)
       
+2. Automated ML Experiment
+
+   In this step, we will create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment. We will use the Bank Marketing dataset described above.
+   
+   Main operations in Automated ML Experiment step are as follows:
+   
+   - Upload the bankmarketing_train.csv to Azure Machine Learning Studio so that it can be used when training the model.
+   
+   ![automl_rm_dataset_1.png](images/automl/automl_dataset_1.png)
+   
+   - Create a new AutoML run and select BAnkmarketting dataset
+   
+   ![automl_1.png](images/automl/automl_1.png)
+   
+   - Create a new AutoML experiment
+   
+   ![automl_4.png](images/automl/automl_4.png)
+   
+   - Configure a new compute cluster
+   
+   ![automl_3.png](images/automl/automl_3.png)
+   
+   - Run the experiment using classification, ensure 'Explain best model' is checked
+   
+   ![automl_5.png](images/automl/automl_5.png)
+   
+   ![automl_8.png](images/automl/automl_8.png)
+   
+   - Wait for the experiment finishes and explore the best model
+   
+   ![automl_9.png](images/automl/automl_9.png)
+   
+   ![automl_10.png](images/automl/automl_10.png)
+        
+   ![automl_11.png](images/automl/automl_11.png)
+   
+   ![automl_12.png](images/automl/automl_12.png)
+   
+3. Deploy the best model
+
+   Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
+   
+   Main operations in Automated ML Experiment step are as follows:
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
