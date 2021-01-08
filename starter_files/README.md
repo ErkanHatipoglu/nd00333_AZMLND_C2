@@ -1,20 +1,3 @@
-Jupyter Notebook
-Untitled
-Last Checkpoint: Last Wednesday at 11:29 AM
-(autosaved)
-Current Kernel Logo
-Python 3 
-File
-Edit
-View
-Insert
-Cell
-Kernel
-Widgets
-Help
-
-Markdown
-5
 # Operationalizing Machine Learning
 ​
 In this project, we are working with the Bank Marketing dataset. We use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We are also creating, publishing, and consuming a pipeline. 
@@ -112,7 +95,7 @@ Image by Udacity
    ![AutoML_12.png](images/automl/AutoML_12.png)
    
 3. Deploy the best model
-​
+
    Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
    
    Main operations in Deploy the best model step are as follows:
