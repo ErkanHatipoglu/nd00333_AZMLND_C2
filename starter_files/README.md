@@ -103,7 +103,7 @@ Image by Udacity
    
    - Wait for the experiment finishes and explore the best model
    
-   ![AutoML.png](images/automl/v_9.png)
+   ![AutoML_9.png](images/automl/AutoML_9.png)
    
    ![AutoML_10.png](images/automl/AutoML_10.png)
         
