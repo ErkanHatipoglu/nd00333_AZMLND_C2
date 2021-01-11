@@ -4,7 +4,7 @@ In this project, we are working with the Bank Marketing dataset. We use Azure to
 
 This dataset is about a phone call marketing campaign. The original data can be found [@UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing). The dataset can be used (as we are using) to predict if the client will subscribe to a term deposit or not. The target variable is y. 
 
-The lab environment provided by Udacity will not be used for this project. Instead a local development environment along with Microsoft Azure account will be used. 
+The lab environment provided by Udacity will not be used for this project. Instead, a local development environment along with a Microsoft Azure account will be used. 
 
 ## Architectural Diagram
 
@@ -12,11 +12,11 @@ In this project, We are following the below steps:
 
 1. Authentication
 2. Automated ML Experiment
-3. Deploy the best model
-4. Enable logging
+3. Deploy the Best Model
+4. Enable Logging
 5. Swagger Documentation
-6. Consume model endpoints
-7. Create and publish a pipeline
+6. Consume Model Endpoints
+7. Create and Publish a Pipeline
 8. Documentation
 
 ![Main Steps](images/steps/steps.png)
@@ -30,17 +30,17 @@ Image by Udacity
 
    A “Service Principal” is a user role with controlled permissions to access specific resources. Using a service principal is a great way to allow authentication while reducing the scope of permissions, which enhances security.
    
-   Main operations in Authentication step are as follows:
+   Main operations in the Authentication step are as follows:
    
-      - Use Git Bash to sign in Microsoft account using `az login` command.
+      - Use Git Bash to sign in Microsoft account using the `az login` command.
       
       ![Authentication_rm_2.png](images/authentication/authentication_2.png)
       
-      - Ensure the az command-line tool is installed along with the ml using `az extension add -n azure-cli-ml` command.
+      - Ensure the az command-line tool is installed along with the ml using the `az extension add -n azure-cli-ml` command.
       
       ![Authentication_rm_3.png](images/authentication/authentication_3.png)
       
-      - Create the Service Principal with az after login in using `az ad sp create-for-rbac --sdk-auth --name ml-auth` command.
+      - Create the Service Principal with az after login in using the `az ad sp create-for-rbac --sdk-auth --name ml-auth` command.
       
       ![Authentication_rm_4.png](images/authentication/authentication_4.png)
       
@@ -50,7 +50,7 @@ Image by Udacity
       
       ![Authentication_rm_5.png](images/authentication/authentication_5.png)
       
-      - Assign the role to the new Service Principal for the given Workspace, Resource Group and User `objectId`. You will need to match your workspace, subscription, and ID. There should be no error at the output. Use the following command:
+      - Assign the role to the new Service Principal for the given Workspace, Resource Group, and User `objectId`. You will need to match your workspace, subscription, and ID. There should be no error in the output. Use the following command:
       
       ```az ml workspace share -w xxx -g xxx --user xxxxxxxx-cbdb-4cfd-089f-xxxxxxxxxxxx --role owner```
       
@@ -60,7 +60,7 @@ Image by Udacity
 
    In this step, we will create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment. We will use the Bank Marketing dataset described above.
    
-   Main operations in Automated ML Experiment step are as follows:
+   Main operations in the Automated ML Experiment step are as follows:
    
    - Upload the bankmarketing_train.csv to Azure Machine Learning Studio so that it can be used when training the model.
    
@@ -94,7 +94,7 @@ Image by Udacity
    
    ![AutoML_12.png](images/automl/AutoML_12.png)
    
-3. Deploy the best model
+3. Deploy the Best Model
 
    Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
    
@@ -112,11 +112,11 @@ Image by Udacity
    
    ![Deploy_5.png](images/deploy/Deploy_5.png)
    
-4. Enable logging
+4. Enable Logging
 
-   We can now enable Application Insights and retrieve logs. Application Insights is a special Azure service which provides key facts about an application. It is a very useful tool to detect anomalies and visualize performance.
+   We can now enable Application Insights and retrieve logs. Application Insights is a special Azure service that provides key facts about an application. It is a very useful tool to detect anomalies and visualize performance.
    
-   Main operations in Enable logging step are as follows:
+   Main operations in the Enable Logging step are as follows:
    
    - Download config.json from ML Studio
    
@@ -134,7 +134,39 @@ Image by Udacity
    
 5. Swagger Documentation
 
-   In this step, you will consume the deployed model using Swagger.
+   In this step, we will consume the deployed model using Swagger. Swagger is a tool that helps build, document, and consume RESTful web services like the ones we are deploying in Azure ML Studio.
+   
+    Main operations in the Swagger Documentation step are as follows:
+    
+    - Download the swagger.json file.
+    
+     Azure provides a swagger.json that is used to create a web site that documents the HTTP endpoint for a deployed model. We can find swagger.json URI in the Endpoints section.
+     
+     ![Swagger_8.png](images/swagger/Swagger_8.png)
+     
+     We need to download the swagger.json to the swagger folder. There should be 3 files in the swagger folder.
+     
+     ![Swagger_2.png](images/swagger/Swagger_2.png)
+     
+     - Run the swagger.sh in git bash.
+     
+     ![Swagger_3.png](images/swagger/Swagger_3.png)
+     
+     - Run the serve.py in another git bash.
+     
+     ![Swagger_4.png](images/swagger/Swagger_4.png)
+     
+     -Interact with the swagger instance running with the documentation for the HTTP API for the model.
+     
+     To do that we will first use the `http://localhost/` in our browser to interact with the swagger instance running with the documentation for the HTTP API of the model then we will use `http://localhost:8000/swagger.json` to display the contents of the API for the model.
+     
+     ![Swagger_5.png](images/swagger/Swagger_5.png)
+     
+     ![Swagger_6.png](images/swagger/Swagger_6.png)
+     
+     ![Swagger_7.png](images/swagger/Swagger_7.png)
+     
+6. Consume Model Endpoints
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
