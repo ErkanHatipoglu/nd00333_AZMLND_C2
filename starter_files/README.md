@@ -167,6 +167,47 @@ Image by Udacity
      ![Swagger_7.png](images/swagger/Swagger_7.png)
      
 6. Consume Model Endpoints
+   
+   We can consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests.
+
+   Users can initiate an input request, usually via an HTTP POST request. HTTP POST is a request method that is used to submit data. The HTTP GET is another commonly used request method. HTTP GET is used to retrieve information from a URL. The allowed request methods and the different URLs exposed by Azure create a bi-directional flow of information.
+
+   The APIs exposed by Azure ML will use JSON (JavaScript Object Notation) to accept data and submit responses. It served as a bridge language among different environments.
+   
+   Main operations in the Consume Model Endpoints step are as follows:
+   
+   - Modify both the `scoring_uri` and the `key` (in `endpoint.py`) to match the key for our service and the URI that was generated after deployment.
+   
+   `scoring_uri` and the `key` can be found on the 'consume' tab of the model endpoint.
+   
+   ![CME_2.png](images/consume_model_endpoints/CME_2.png)
+   
+   - Run `endpoint.py`
+   
+   ![CME_3.png](images/consume_model_endpoints/CME_3.png)
+ 
+6. Consume Model Endpoints - Optional Step Benchmarking
+
+   A benchmark is used to create a baseline or acceptable performance measure. Benchmarking HTTP APIs is used to find the average response time for a deployed model.
+
+   One of the most significant metrics is the response time since Azure will timeout if the response times are longer than sixty seconds.
+
+   Apache Benchmark is an easy and popular tool for benchmarking HTTP services. 
+   
+   Main operations in the Optional Step Benchmarking step are as follows:
+   
+   - Make sureApache Benchmark command-line tool is is [installed](https://www.cedric-dumont.com/2017/02/01/install-apache-benchmarking-tool-ab-on-windows/) and available in your path.
+   
+   - In the `endpoint.py`, replace the key and URI again
+   
+   - Run `endpoint.py`. A `data.json` file should appear
+   
+   - Run the `benchmark.sh` file.
+   
+    ![bm_0.png](images/benchmark/bm_0.png)
+    
+    ![bm_1.png](images/benchmark/bm_1.png)
+   
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
