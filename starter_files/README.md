@@ -186,7 +186,7 @@ Image by Udacity
    
    ![CME_3.png](images/consume_model_endpoints/CME_3.png)
  
-6. Consume Model Endpoints - Optional Step Benchmarking
+   **Benchmarking**
 
    A benchmark is used to create a baseline or acceptable performance measure. Benchmarking HTTP APIs is used to find the average response time for a deployed model.
 
@@ -194,7 +194,7 @@ Image by Udacity
 
    Apache Benchmark is an easy and popular tool for benchmarking HTTP services. 
    
-   Main operations in the Optional Step Benchmarking step are as follows:
+   Main operations in the Benchmarking step are as follows:
    
    - Make sureApache Benchmark command-line tool is is [installed](https://www.cedric-dumont.com/2017/02/01/install-apache-benchmarking-tool-ab-on-windows/) and available in your path.
    
@@ -207,8 +207,51 @@ Image by Udacity
     ![bm_0.png](images/benchmark/bm_0.png)
     
     ![bm_1.png](images/benchmark/bm_1.png)
-   
+    
+7. Create and Publish a Pipeline
 
+   For this part of the project, we will use the Jupyter Notebook provided in the starter files folder and the Azure portal.
+   
+   Main operations in the Create and Publish a Pipeline step are as follows:
+   
+   - Upload the Jupyter Notebook
+   
+   ![pipeline_1.png](images/pipeline/pipeline_1.png)
+   
+   - Update all the variables that are noted to match the environment and make sure that a `config.json` has been downloaded and is available in the current working directory.
+   
+   ![pipeline_2.png](images/pipeline/pipeline_2.png)
+   
+   - Run through the cells
+   
+   ![pipeline_6.png](images/pipeline/pipeline_6.png)
+   
+   ![pipeline_s_1.png](images/pipeline/pipeline_s_1.png)
+   
+   ![pipeline_s_2.png](images/pipeline/pipeline_s_2.png)
+   
+   ![pipeline_14.png](images/pipeline/pipeline_14.png)
+   
+   ![pipeline_s_3.png](images/pipeline/pipeline_s_3.png)
+   
+   ![pipeline_8.png](images/pipeline/pipeline_8.png)
+   
+   ![pipeline_9.png](images/pipeline/pipeline_9.png)
+   
+   ![pipeline_12.png](images/pipeline/pipeline_12.png)
+   
+   ![pipeline_13.png](images/pipeline/pipeline_13.png)
+   
+   ![pipeline_19.png](images/pipeline/pipeline_19.png)
+   
+   ![pipeline_s_5.png](images/pipeline/pipeline_s_5.png)
+   
+   ![pipeline_10.png](images/pipeline/pipeline_10.png)
+   
+   ![pipeline_22.png](images/pipeline/pipeline_22.png)
+   
+   ![pipeline_s_9.png](images/pipeline/pipeline_s_9.png)   
+   
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
