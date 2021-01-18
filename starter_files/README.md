@@ -224,6 +224,10 @@ Image by Udacity
    
    - Run through the cells
    
+   ![pipeline_3.png](images/pipeline/pipeline_3.png)
+   
+   Below you can find some important screenshots for this stage:
+   
    ![pipeline_6.png](images/pipeline/pipeline_6.png)
    
    ![pipeline_s_1.png](images/pipeline/pipeline_s_1.png)
