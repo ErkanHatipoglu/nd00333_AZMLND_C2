@@ -257,10 +257,7 @@ Image by Udacity
    ![pipeline_s_9.png](images/pipeline/pipeline_s_9.png)   
    
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+[Project 2 Operationalizing Machine Learning Screencast](https://youtu.be/6nQsHSIBeCA)
 
 ## References
 - [Machine Learning Engineer for Microsoft Azure](https://www.udacity.com/course/machine-learning-engineer-for-microsoft-azure-nanodegree--nd00333)
